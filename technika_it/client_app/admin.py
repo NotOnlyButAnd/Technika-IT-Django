@@ -1,3 +1,6 @@
 from django.contrib import admin
+from client_app.models import *
 
-# Register your models here.
+@admin.register(Image)
+class ImageAdmin(admin.ModelAdmin):
+    model = Image
