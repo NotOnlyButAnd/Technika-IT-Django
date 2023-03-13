@@ -34,6 +34,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 INSTALLED_APPS = [
     'client_app',
+    'graphene_django',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -72,6 +73,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'technika_it.wsgi.application'
 
+GRAPHENE = {
+  "SCHEMA": "client_app.schema.schema",
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
