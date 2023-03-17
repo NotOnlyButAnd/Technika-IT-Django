@@ -1,10 +1,8 @@
 import json
-import requests
-import router from '@/router'
 
 
-@router.get("/new_products/{limit}")
-def get_new_products_list(url: str, limit: int = 10):
+# @router.get("/new_products/{limit}")
+def get_new_products_list(url: str = None, limit: int = 5):
     """
     Получение списка новинок
 
