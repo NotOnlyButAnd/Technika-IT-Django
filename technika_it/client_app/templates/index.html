@@ -7,7 +7,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Montserrat:wght@700&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@700;400&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Medical Center</title>
 </head>
 
@@ -16,9 +16,9 @@
         <header class="header">
             <div class="header__container _container">
                 <div class="header__logo">
-                    <div class="logo__icon"><img src="{% static 'img/logo.png' %}"></div>
+                    <div class="logo__icon"><img src="img/logo.png"></div>
                     <div class="logo__catalog">
-                        <p class="logo__catalog-one">Каталог<img src="{% static 'img/arrow.png' %}"></p>
+                        <p class="logo__catalog-one">Каталог<img src="img/arrow.png"></p>
                     </div>
                 </div>
                 <div class="wrap">
@@ -30,9 +30,9 @@
                 
                 <div class="header__menu">
                     <nav class="nav">
-                        <a class="nav__link" href="#1"><img src="{% static 'img/heart.png' %}" alt="">Избранное</a>
-                        <a class="nav__link" href="#2"><img src="{% static 'img/basket.png' %}" alt="">Корзина</a>
-                        <a class="nav__link" href="#3"><img src="{% static 'img/profile.png' %}" alt="">Профиль</a>
+                        <a class="nav__link" href="#1"><img src="img/heart.png" alt="">Избранное</a>
+                        <a class="nav__link" href="#2"><img src="img/basket.png" alt="">Корзина</a>
+                        <a class="nav__link" href="#3"><img src="img/profile.png" alt="">Профиль</a>
                     </nav>
                 </div>
             </div>
@@ -41,53 +41,57 @@
         <div class="main-page">
             <div class="main-page__container _container">
                 <div class="main-page__catalog">
-                    <a class="nav__catalog" href="#laptop"><img src="{% static 'img/laptop.png' %}">Ноутбуки</a>
-                    <br><a class="nav__catalog" href="#pc"><img src="{% static 'img/pc.png' %}">Компьютеры</a>
-                    <br><a class="nav__catalog" href="#processor"><img src="{% static 'img/processor.png' %}">Процессоры</a>
-                    <br><a class="nav__catalog" href="#mat_plata"><img src="{% static 'img/mat_plata.png' %}">Материнская плата</a>
-                    <br><a class="nav__catalog" href="#videocard"><img src="{% static 'img/videocard.png' %}">Видеокарты</a>
-                    <br><a class="nav__catalog" href="#memory"><img src="{% static 'img/memory.png' %}">Оперативная память</a>
-                    <br><a class="nav__catalog" href="#hard_disk"><img src="{% static 'img/hard_disk.png' %}">Жесткие диски</a>
-                    <br><a class="nav__catalog" href="#monitor"><img src="{% static 'img/monitor.png' %}">Мониторы</a>
-                    <br><a class="nav__catalog" href="#power"><img src="{% static 'img/power.png' %}">Мониторы</a>
-                    <br><a class="nav__catalog" href="#accessories"><img src="{% static 'img/accessories.png' %}">Аксессуары</a>
+                    <a class="nav__catalog" href="#laptop"><img src="img/laptop.png">Ноутбуки</a>
+                    <br><a class="nav__catalog" href="#pc"><img src="img/pc.png">Компьютеры</a>
+                    <br><a class="nav__catalog" href="#processor"><img src="img/processor.png">Процессоры</a>
+                    <br><a class="nav__catalog" href="#mat_plata"><img src="img/mat_plata.png">Материнская плата</a>
+                    <br><a class="nav__catalog" href="#videocard"><img src="img/videocard.png">Видеокарты</a>
+                    <br><a class="nav__catalog" href="#memory"><img src="img/memory.png">Оперативная память</a>
+                    <br><a class="nav__catalog" href="#hard_disk"><img src="img/hard_disk.png">Жесткие диски</a>
+                    <br><a class="nav__catalog" href="#monitor"><img src="img/monitor.png">Мониторы</a>
+                    <br><a class="nav__catalog" href="#power"><img src="img/power.png">Мониторы</a>
+                    <br><a class="nav__catalog" href="#accessories"><img src="img/accessories.png">Аксессуары</a>
                 </div>
                 <div class="new_box">
                 <p class="new_text">Новинки</p>
                 <div class="main-page__block">
-                    <img src="{% static 'img/left-arrow.png' %}">
+                    <div class="main-page-img-one">
+                        <img src="img/left-arrow.png">
+                    </div>
                     <div class="main-page__card">
                         <div class="main-page__card-one">
                             <a class="nav__tovar" href="#tovar">
-                                <img src="{% static 'img/laptop-one.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
+                                <img src="img/laptop-one.png" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
                                 <p class="laptop">17.3" Ноутбук MSI GF76 Katana 11SC-483XRU черный</p>
                             </a>
                             <button type="button" class="price">60 949 ₽</button>
-                            <button type="button" class="favourites" ><img src="{% static 'img/white_heart.png' %}"></button>
-                            <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
+                            <button type="button" class="favourites" ><img src="img/white_heart.png"></button>
+                            <button type="button" class="basket" ><img src="img/white_basket.png"></button>
                         </div> 
                         
                         <div class="main-page__card-two">
                             <a class="nav__tovar" href="#tovar">
-                                <img src="{% static 'img/laptop-two.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
+                                <img src="img/laptop-two.png" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
                                 <p class="laptop">14.1" Ноутбук Irbis NB270 белый</p>
                             </a>
                             <button type="button" class="price">19 999 ₽</button>
-                            <button type="button" class="favourites"><img src="{% static 'img/white_heart.png' %}"></button>
-                            <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
+                            <button type="button" class="favourites"><img src="img/white_heart.png"></button>
+                            <button type="button" class="basket" ><img src="img/white_basket.png"></button>
                         </div> 
     
                         <div class="main-page__card-three">
                             <a class="nav__tovar" href="#tovar">
-                                <img src="{% static 'img/laptop-three.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
+                                <img src="img/laptop-three.png" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
                                 <p class="laptop">15.6" Ноутбук ASUS VivoBook PRO 15 M6500QH-HN034 синий</p>
                             </a>
                             <button type="button" class="price">22 489 ₽</button>
-                            <button type="button" class="favourites" ><img src="{% static 'img/white_heart.png' %}"></button>
-                            <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
+                            <button type="button" class="favourites" ><img src="img/white_heart.png"></button>
+                            <button type="button" class="basket" ><img src="img/white_basket.png"></button>
                         </div> 
                     </div>
-                    <img src="{% static 'img/right-arrow.png' %}">
+                    <div class="main-page-img-two">
+                        <img src="img/right-arrow.png">
+                    </div>
                 </div>
             </div>
             </div>
@@ -99,8 +103,8 @@
                     <div class="footer__block-one-two">
                         <div class="footer__block-one">
                             <div class="footer__block-logo">
-                                <img src="{% static 'img/klient.png' %}">
-                                <p>Для клиентов</p>
+                                <img src="img/klient.png">
+                                <p>Для клиетов</p>
                             </div>
                             <ul>
                                 <li>Наши клиенты – в центре всего, что мы делаем,</li>
@@ -111,7 +115,7 @@
                         </div>
                         <div class="footer__block-two">
                             <div class="footer__block-logo">
-                                <img src="{% static 'img/collaboration.png' %}">
+                                <img src="img/collaboration.png">
                                 <p>Для сотрудников</p>
                             </div>
                             <ul>
@@ -124,7 +128,7 @@
                     </div>
                     <div class="footer__block-three">
                         <div class="footer__block-logo">
-                            <img src="{% static 'img/handshake.png' %}">
+                            <img src="img/handshake.png">
                             <p>Для партнеров</p>
                         </div>
                         <ul>
