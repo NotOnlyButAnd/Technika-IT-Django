@@ -20,7 +20,7 @@ class Manufacture(models.Model):
 
     #Возможность сортировки по названию производителя 
     class Meta:
-        ordering = ["-manufacturer_id"]
+        ordering = ["-manufacture_id"]
         verbose_name = "Производитель"
 
     def __str__(self):
@@ -45,7 +45,6 @@ class Products(models.Model):
     main_category_id = models.ForeignKey(Categories, on_delete=models.SET_NULL, verbose_name="Категория",null=True)
     manufacturer_id = models.ForeignKey(Manufacture, on_delete=models.SET_NULL, verbose_name="Производитель",null=True)
     title = models.CharField(max_length=75)
-    #В description заказывали большие поля... воть....
     description = models.TextField()
     price  = models.IntegerField()
     number_of_available = models.IntegerField()
@@ -61,10 +60,10 @@ class Products(models.Model):
 class Images_products(models.Model):
     image_id = models.ForeignKey(Image, on_delete=models.SET_NULL, verbose_name="Главная картинка",null=True)
     product_id = models.ForeignKey(Products, on_delete=models.SET_NULL, verbose_name="Товар",null=True)
-    id_images_products = GenericForeignKey(
-        'product_id',
-        'image_id',
-    )
+    # id_images_products = GenericForeignKey(
+    #     'product_id',
+    #     'image_id',
+    # )
 
     class Meta:
         ordering = ["-product_id"]
@@ -76,10 +75,10 @@ class Images_products(models.Model):
 class Categories_products(models.Model):
     category_id = models.ForeignKey(Categories, on_delete=models.SET_NULL, verbose_name="Категория", null=True)
     product_id = models.ForeignKey(Products, on_delete=models.SET_NULL, verbose_name="Товар", null=True)
-    id_images_products = GenericForeignKey(
-        'product_id',
-        'category_id',
-    )
+    # id_images_products = GenericForeignKey(
+    #     'product_id',
+    #     'category_id'
+    # )
 
     class Meta:
         ordering = ["-product_id","-category_id"]

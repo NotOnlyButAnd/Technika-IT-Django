@@ -16,11 +16,11 @@ class ManufactureAdmin(admin.ModelAdmin):
     )
     #Встроенный виджет для фильтрации
     list_filter = (
-        "title"
+        "title",
     )
     #Строка поиска
     search_fields = (
-        "title"
+        "title",
     )
 
     save_on_top = True
@@ -36,11 +36,11 @@ class CategoriesAdmin(admin.ModelAdmin):
     )
     #Встроенный виджет для фильтрации
     list_filter = (
-        "category_id"
+        "category_id",
     )
     #Строка поиска
     search_fields = (
-        "title"
+        "title",
     )
 
     save_on_top = True
@@ -64,7 +64,7 @@ class ProductsAdmin(admin.ModelAdmin):
     )
     #Строка поиска
     search_fields = (
-        "title"
+        "title",
     )
 
     save_on_top = True
@@ -80,7 +80,7 @@ class ImagesProductsAdmin(admin.ModelAdmin):
     )
     #Встроенный виджет для фильтрации
     list_filter = (
-        "product_id"
+        "product_id",
     )
 
     save_on_top = True
