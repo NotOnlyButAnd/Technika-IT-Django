@@ -27,7 +27,7 @@ class ManufactureAdmin(admin.ModelAdmin):
 
 
 @admin.register(Category)
-class CategoriesAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     model = Category
     #Отображение списка изменений
     list_display = (

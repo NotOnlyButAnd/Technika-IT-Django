@@ -12,7 +12,7 @@ def get_categories_products_list(url: str, category_id: int):
         Where categories_products.category_id={category_id};
     """
     data = []
-    products = Products.objects.select_related('images').order_by('-products.product_id')
+    products = Product.objects.select_related('image').order_by('-product.product_id')
     for row in products:
         data = [
             {

@@ -44,9 +44,9 @@ class Category(models.Model):
 
 class Product(models.Model):
     product_id = models.IntegerField(primary_key=True)
-    main_image_id = models.ForeignKey(Image, on_delete=models.SET_NULL, verbose_name="Главная картинка",null=True)
-    main_category_id = models.ForeignKey(Category, on_delete=models.SET_NULL, verbose_name="Категория",null=True)
-    manufacturer_id = models.ForeignKey(Manufacture, on_delete=models.SET_NULL, verbose_name="Производитель",null=True)
+    main_image = models.ForeignKey(Image, on_delete=models.SET_NULL, verbose_name="Главная картинка",null=True)
+    main_category = models.ForeignKey(Category, on_delete=models.SET_NULL, verbose_name="Категория",null=True)
+    manufacturer = models.ForeignKey(Manufacture, on_delete=models.SET_NULL, verbose_name="Производитель",null=True)
     title = models.CharField(max_length=75)
     description = models.TextField()
     price  = models.IntegerField()
@@ -63,34 +63,34 @@ class Product(models.Model):
 
 
 class Image_product(models.Model):
-    image_id = models.ForeignKey(Image, on_delete=models.SET_NULL, verbose_name="Главная картинка",null=True)
-    product_id = models.ForeignKey(Product, on_delete=models.SET_NULL, verbose_name="Товар",null=True)
+    image = models.ForeignKey(Image, on_delete=models.SET_NULL, verbose_name="Главная картинка",null=True)
+    product = models.ForeignKey(Product, on_delete=models.SET_NULL, verbose_name="Товар",null=True)
     # id_images_products = GenericForeignKey(
     #     'product_id',
     #     'image_id',
     # )
 
     class Meta:
-        ordering = ["-product_id"]
+        ordering = ["-product"]
         verbose_name = "Фотография товара"
         verbose_name_plural = "Фотографии товара"
 
     def __str__(self):
-        return str(self.product_id)
+        return str(self.product)
 
 
 class Category_product(models.Model):
-    category_id = models.ForeignKey(Category, on_delete=models.SET_NULL, verbose_name="Категория", null=True)
-    product_id = models.ForeignKey(Product, on_delete=models.SET_NULL, verbose_name="Товар", null=True)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, verbose_name="Категория", null=True)
+    product = models.ForeignKey(Product, on_delete=models.SET_NULL, verbose_name="Товар", null=True)
     # id_images_products = GenericForeignKey(
     #     'product_id',
     #     'category_id'
     # )
 
     class Meta:
-        ordering = ["-product_id","-category_id"]
+        ordering = ["-product","-category"]
         verbose_name = "Категория товара"
         verbose_name_plural = "Категории товара"
 
     def __str__(self):
-        return str(self.category_id) + str(self.product_id)
+        return str(self.category) + str(self.product)

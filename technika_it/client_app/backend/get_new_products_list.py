@@ -16,7 +16,7 @@ def get_new_products_list(url: str = None, limit: int = 5):
         LIMIT {limit};
     """
     data = []
-    products = Products.objects.select_related('images').order_by('-products.product_id')[:limit]
+    products = Product.objects.select_related('image').order_by('-product.product_id')[:limit]
     for row in products:
         data = [
             {
