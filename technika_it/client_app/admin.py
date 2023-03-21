@@ -26,9 +26,9 @@ class ManufactureAdmin(admin.ModelAdmin):
     save_on_top = True
 
 
-@admin.register(Categories)
+@admin.register(Category)
 class CategoriesAdmin(admin.ModelAdmin):
-    model = Categories
+    model = Category
     #Отображение списка изменений
     list_display = (
         "category_id",
@@ -45,9 +45,9 @@ class CategoriesAdmin(admin.ModelAdmin):
 
     save_on_top = True
 
-@admin.register(Products)
+@admin.register(Product)
 class ProductsAdmin(admin.ModelAdmin):
-    model = Products
+    model = Product
     #Отображение списка изменений
     list_display = (
         "product_id",
@@ -70,9 +70,9 @@ class ProductsAdmin(admin.ModelAdmin):
     save_on_top = True
 
 
-@admin.register(Images_products)
+@admin.register(Image_product)
 class ImagesProductsAdmin(admin.ModelAdmin):
-    model = Images_products
+    model = Image_product
     #Отображение списка изменений
     list_display = (
         "image_id",
@@ -86,9 +86,9 @@ class ImagesProductsAdmin(admin.ModelAdmin):
     save_on_top = True
 
 
-@admin.register(Categories_products)
+@admin.register(Category_product)
 class CategoriesProductsAdmin(admin.ModelAdmin):
-    model = Categories_products
+    model = Category_product
     # Отображение списка изменений
     list_display = (
         "category_id",
