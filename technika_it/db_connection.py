@@ -51,6 +51,15 @@ connection = create_connection(
     config('DB_NAME'), config('DB_USER'), config('DB_PASSWORD'), config('DB_HOST'), ''
 )
 
+
+# delete_comment = "DROP TABLE client_app_product"
+# execute_query(connection, delete_comment)
+# delete_comment = "DROP TABLE client_app_image_product"
+# execute_query(connection, delete_comment)
+# delete_comment = "DROP TABLE client_app_category_product"
+# execute_query(connection, delete_comment)
+
+
 create_image_table = """
 CREATE TABLE IF NOT EXISTS client_app_image (
     image_id INTEGER PRIMARY KEY,
@@ -72,12 +81,6 @@ CREATE TABLE IF NOT EXISTS client_app_category (
     title VARCHAR(75)
 )
 """
-# delete_comment = "DROP TABLE client_app_product"
-# execute_query(connection, delete_comment)
-# delete_comment = "DROP TABLE client_app_image_product"
-# execute_query(connection, delete_comment)
-# delete_comment = "DROP TABLE client_app_category_product"
-# execute_query(connection, delete_comment)
 
 create_product_table = """
 CREATE TABLE IF NOT EXISTS client_app_product (
@@ -156,13 +159,31 @@ categories = [
     (9, "Блоки питания"),
     (10, "Аксессуары")
 ]
+imgs = [
+    (1, "https://items.s1.citilink.ru/1891570_v01_b.jpg", "something aaa")
+]
+manufacturers = [
+    (1, "Acer")
+]
+products = [
+    (1, 1, 1, 1, "Acer Aspire 3", '15.6", IPS, Intel Core i3 1215U 1.2ГГц, 8ГБ, 256ГБ SSD, Intel UHD Graphics , Windows 11 Home, серебристый', 49990, 5)
+]
 
 categories_records = ", ".join(["%s"] * len(categories))
+imgs_records = ", ".join(["%s"] * len(imgs))
+manufacturers_records = ", ".join(["%s"] * len(manufacturers))
+products_records = ", ".join(["%s"] * len(products))
 
 insert_query = (
-    f"INSERT INTO client_app_category (category_id, title) VALUES {categories_records}"
+    f"INSERT INTO client_app_category (category_id, title) VALUES {categories_records}",
+    f"INSERT INTO client_app_image (image_id, url, alt) VALUES {imgs_records}",
+    f"INSERT INTO client_app_manufacture (manufacture_id, title) VALUES {manufacturers_records}",
+    f"INSERT INTO client_app_product (product_id, main_image_id, main_category_id, manufacturer_id, title, description, price, number_of_available) VALUES {products_records}"
 )
 
-# connection.autocommit = True
-# cursor = connection.cursor()
-# cursor.execute(insert_query, categories)
+connection.autocommit = True
+cursor = connection.cursor()
+cursor.execute(insert_query[0], categories)
+cursor.execute(insert_query[1], imgs)
+cursor.execute(insert_query[2], manufacturers)
+cursor.execute(insert_query[3], products)
