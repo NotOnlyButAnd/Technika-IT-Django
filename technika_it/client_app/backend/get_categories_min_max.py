@@ -4,7 +4,7 @@ import json
 # @router.get("/new_products/{limit}")
 def get_categories_min_max(url: str = None, category_id: int = None):
     """
-    олучение максимальной и минимальной цены в заданной категории
+    Получение максимальной и минимальной цены в заданной категории
 
     Возвращает файл json
 
