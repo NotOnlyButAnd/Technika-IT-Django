@@ -4,8 +4,8 @@ import requests
 
 
 def index(request): 
-    a = get_categories_min_max('http://127.0.0.1:8000/products')
-    print(a)
+    # a = get_categories_min_max('http://127.0.0.1:8000/products')
+    # print(a)
     return render(request, 'index.html') #, {'new_products': new_products_json})
 
 
