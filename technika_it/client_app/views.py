@@ -96,7 +96,6 @@ def get_categories_min_max(url: str = None, category_id: int = 1):
     """
     data = []
     products = requests.get(url).json()
-    print(products[0].get('price'))
     min_price = int(products[0].get('price'))
     max_price = min_price
     for row in products:
