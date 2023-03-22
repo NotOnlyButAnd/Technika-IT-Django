@@ -160,24 +160,25 @@ categories = [
     (10, "Аксессуары")
 ]
 imgs = [
-    (1, "https://items.s1.citilink.ru/1891570_v01_b.jpg", "something aaa")
-    (2,"https://c.dns-shop.ru/thumb/st4/fit/0/0/d28d138ac48b4d07759deac35eaf63c8/e629cf6cd47923025b0085c660818330ca293519b198543890988f13cc93d9e3.jpg.webp","IT_Boss")
-    (3,"https://c.dns-shop.ru/thumb/st1/fit/0/0/45c60cc384000b0128a297af91c18531/3f002f7052ead4264b6e940c222d6c25461464acab13208ebefd680b7fdb9706.jpg.webp","Lyaska")
-    (4,"https://c.dns-shop.ru/thumb/st1/fit/500/500/c2a8385a9f865f0a26dd544e1fcb7e12/d732e228379e44282934ac8d76b2badfc350294e124583c87378a3ff5718f780.jpg.webp","Za")
-    (5,"https://c.dns-shop.ru/thumb/st4/fit/500/500/d503fd0615b3e9ea6a93ee904f365ccd/b027761f69dccbdffb2bb8c545e29248c09c0674d1cac6ddc63fd5a16c23b600.jpg.webp","Mashku")
-    (6,"https://c.dns-shop.ru/thumb/st4/fit/500/500/100368f9e8fbab7d83bde7d1a266428e/150d9a55fa04794593ac811d244387b6501b4e4bdd20e3725a9cfdecaa0af82a.jpg.webp","Mozno")
+    (1, "https://items.s1.citilink.ru/1891570_v01_b.jpg", "something aaa"),
+    (2,"https://c.dns-shop.ru/thumb/st4/fit/0/0/d28d138ac48b4d07759deac35eaf63c8/e629cf6cd47923025b0085c660818330ca293519b198543890988f13cc93d9e3.jpg.webp","IT_Boss"),
+    (3,"https://c.dns-shop.ru/thumb/st1/fit/0/0/45c60cc384000b0128a297af91c18531/3f002f7052ead4264b6e940c222d6c25461464acab13208ebefd680b7fdb9706.jpg.webp","Lyaska"),
+    (4,"https://c.dns-shop.ru/thumb/st1/fit/500/500/c2a8385a9f865f0a26dd544e1fcb7e12/d732e228379e44282934ac8d76b2badfc350294e124583c87378a3ff5718f780.jpg.webp","Za"),
+    (5,"https://c.dns-shop.ru/thumb/st4/fit/500/500/d503fd0615b3e9ea6a93ee904f365ccd/b027761f69dccbdffb2bb8c545e29248c09c0674d1cac6ddc63fd5a16c23b600.jpg.webp","Mashku"),
+    (6,"https://c.dns-shop.ru/thumb/st4/fit/500/500/100368f9e8fbab7d83bde7d1a266428e/150d9a55fa04794593ac811d244387b6501b4e4bdd20e3725a9cfdecaa0af82a.jpg.webp","Mozno"),
 
 ]
 manufacturers = [
-    (1, "Acer"),(2, "Asus"),(3,"HP"),(4,"Lenovo"),(5,"Echips "),(6,"Dell")
+    (1, "Acer"),
+    (2, "Asus"),(3,"HP"),(4,"Lenovo"),(5,"Echips "),(6,"Dell")
 ]
 products = [
-    (1, 1, 1, 1, "Acer Aspire 3", '15.6", IPS, Intel Core i3 1215U 1.2ГГц, 8ГБ, 256ГБ SSD, Intel UHD Graphics , Windows 11 Home, серебристый', 49990, 5)
-    (2,2,1,2,"ASUS Laptop 15",'15.6",Full HD (1920x1080), TN+film, Intel Celeron N4020, ядра: 2 х 1.1 ГГц, RAM 4 ГБ, HDD 1000 ГБ, Intel UHD Graphics', 22399, 10)
-    (3,3,1,3,"HP 255 G8",'15.6",HD (1366x768), SVA (TN+film), AMD Athlon Gold 3150U, ядра: 2 х 2.4 ГГц, RAM 4 ГБ, HDD 1000 ГБ, AMD Radeon Graphics',32000,3)
-    (4,4,1,4,"Lenovo IdeaPad 3",'15.6",HD (1366x768), TN+film, Intel Celeron N4020, ядра: 2 х 1.1 ГГц, RAM 4 ГБ, HDD 1000 ГБ, Intel UHD Graphics',25999,13)
-    (5,5,1,5,"Echips Envy ",'15.6",Full HD (1920x1080), IPS, Intel Celeron J4125, ядра: 4 х 2 ГГц, RAM 8 ГБ, SSD 240 ГБ, Intel UHD Graphics 600 , Windows 10 Pro',32000,4)
-    (6,6,1,6,"Dell Vostro 3400-4579",'14",Full HD (1920x1080), WVA (TN+film), Intel Core i3-1115G4, ядра: 2 х 3 ГГц, RAM 4 ГБ, HDD 1000 ГБ, SSD 256 ГБ, Intel UHD Graphics , Linux',29999,7)
+    (1, 1, 1, 1, "Acer Aspire 3", '15.6", IPS, Intel Core i3 1215U 1.2ГГц, 8ГБ, 256ГБ SSD, Intel UHD Graphics , Windows 11 Home, серебристый', 49990, 5),
+    (2,2,1,2,"ASUS Laptop 15",'15.6",Full HD (1920x1080), TN+film, Intel Celeron N4020, ядра: 2 х 1.1 ГГц, RAM 4 ГБ, HDD 1000 ГБ, Intel UHD Graphics', 22399, 10),
+    (3,3,1,3,"HP 255 G8",'15.6",HD (1366x768), SVA (TN+film), AMD Athlon Gold 3150U, ядра: 2 х 2.4 ГГц, RAM 4 ГБ, HDD 1000 ГБ, AMD Radeon Graphics',32000,3),
+    (4,4,1,4,"Lenovo IdeaPad 3",'15.6",HD (1366x768), TN+film, Intel Celeron N4020, ядра: 2 х 1.1 ГГц, RAM 4 ГБ, HDD 1000 ГБ, Intel UHD Graphics',25999,13),
+    (5,5,1,5,"Echips Envy ",'15.6",Full HD (1920x1080), IPS, Intel Celeron J4125, ядра: 4 х 2 ГГц, RAM 8 ГБ, SSD 240 ГБ, Intel UHD Graphics 600 , Windows 10 Pro',32000,4),
+    (6,6,1,6,"Dell Vostro 3400-4579",'14",Full HD (1920x1080), WVA (TN+film), Intel Core i3-1115G4, ядра: 2 х 3 ГГц, RAM 4 ГБ, HDD 1000 ГБ, SSD 256 ГБ, Intel UHD Graphics , Linux',29999,7),
 ]
 
 categories_records = ", ".join(["%s"] * len(categories))
