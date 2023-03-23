@@ -200,42 +200,6 @@ body {
     display: flex;
     margin-left: 30px;
 }
-
-.main-page__card{
-    display: flex;
-    margin-top: 20px;
-    background-color: #C6D8FF;
-    padding: 20px;
-    margin-bottom: 75px;
-    border-radius: 10px;
-}
-
-.main-page-img-one, .main-page-img-two {
-    margin-top: 200px;
-    flex: auto;
-    height: 30px;
-    width: 31px;
-}
-
-.main-page-img-one{
-    padding-right: 10px;
-}
-
-.main-page-img-two{
-    padding-left: 10px;
-}
-.main-page__card-one{
-    flex: 1 1 33%;
-    padding-right: 10px;
-}
-.main-page__card-two{
-    flex: 1 1 33%;
-    padding-right: 10px;
-}
-.main-page__card-three{
-    flex: 1 1 33%;
-    padding-right: 10px;
-}
 .laptop{
     margin-top: 10px;
     font-family: 'Lato';
@@ -288,6 +252,7 @@ body {
     line-height: 41px;
     color: #000000;
     padding-left: 40px;
+    margin-bottom: 20px;
 }
 
 
@@ -343,4 +308,39 @@ ul{
     margin-right: 15px;
     margin-top: -5px;
 }
+/* ------------------- Слайдер -----------------------------*/
+.swiper{
+    width: 800px;
+    height: 100%;
+    background-color: #C6D8FF;
+    border-radius: 2%;
+  }
+
+  .swiper-slide{
+    display: flex;
+    flex: 1 1 33%;
+    padding-right: 10px;
+  }
+
+  .swiper-wrapper{
+    display: flex;
+    background-color: #C6D8FF;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right: 300px !important; 
+    left: auto;
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: 640px !important; 
+    right: auto;
+  }
+
+  .swiper-slide-type{
+    flex: 1 1 33%;
+    padding-right: 10px;
+  }
 
