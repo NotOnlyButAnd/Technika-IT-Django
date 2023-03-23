@@ -2,11 +2,15 @@ from django.shortcuts import render
 import requests
 # from .backend.get_new_products_list import get_categories_products_list
 
+products_url = 'http://127.0.0.1:8000/products'
+images_url = 'http://127.0.0.1:8000/images'
+category_url = 'http://127.0.0.1:8000/category'
+
 
 def index(request): 
-    # a = get_categories_min_max('http://127.0.0.1:8000/products')
-    # print(a)
-    return render(request, 'index.html') #, {'new_products': new_products_json})
+    new_products = get_new_products_list()
+    print(new_products)
+    return render(request, 'index.html', {'new_products': new_products})
 
 
 def get_categories_products_list(url: str, category_id: int):
@@ -41,7 +45,7 @@ def get_all_categories(url: str):
     return data
 
 
-def get_new_products_list(url: str, limit: int = 5):
+def get_new_products_list(limit: int = 5):
     """
     Получение списка новинок
     Возвращает файл json
@@ -52,9 +56,20 @@ def get_new_products_list(url: str, limit: int = 5):
         ORDER BY products.product_id DESC
         LIMIT {limit};
     """
+
     data = []
-    products = requests.get(url).json()
+    products = requests.get(products_url).json()
+    categories = requests.get(category_url).json()
+    images = requests.get(images_url).json()
+
     for i in range(limit):
+        for j in images:
+            if j['image_id'] == products[i]['main_image']:
+                products[i]['main_image'] = j['url']
+
+        for j in categories:
+            if j['category_id'] == products[i]['main_category']:
+                products[i]['main_category'] = j['title']
         data.append(products[i])
 
     return data

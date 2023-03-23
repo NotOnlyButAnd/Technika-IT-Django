@@ -62,21 +62,21 @@
                     <div class="main-page__block">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-
+                                {% for product in new_products %}
                                 <div class="swiper-slide">
                                     <div class="swiper-slide-type">
                                         <a class="nav__tovar" href="#tovar">
-                                            <img src="{% static 'img/laptop-one.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
-                                            <p class="laptop">17.3" Ноутбук MSI GF76 Katana 11SC-483XRU черный</p>
+                                            <img src="{{ new_products.main_image }}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
+                                            <p class="laptop">{{ product.main_category}} {{ product.title }}</p>
                                         </a>
-                                        <button type="button" class="price">60 949 ₽</button>
+                                        <button type="button" class="price">{{ product.price }} ₽</button>
                                         <button type="button" class="favourites" ><img src="{% static 'img/white_heart.png' %}"></button>
                                         <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
                                     </div>
                                 </div>
+                                {% endfor %}
 
-
-                                <div class="swiper-slide">
+                                <<!-- div class="swiper-slide">
                                     <div class="swiper-slide-type">
                                         <a class="nav__tovar" href="#tovar">
                                             <img src="{% static 'img/laptop-two.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
@@ -134,8 +134,8 @@
                                         <button type="button" class="price">22 489 ₽</button>
                                         <button type="button" class="favourites" ><img src="{% static 'img/white_heart.png' %}"></button>
                                         <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
-                                    </div> 
-                                </div>
+                                    </div>  -->
+                                <!-- </div> -->
                             </div>
                             <div class="swiper-pagination"></div>
                         
