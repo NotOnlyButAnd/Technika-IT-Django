@@ -177,7 +177,6 @@ body {
     background-color: #C6D8FF;
     padding: 35px;
     margin-top: 35px;
-    margin-left: 25px;
     margin-bottom: 35px;
     margin-right: 25px;
     display: grid;
@@ -210,32 +209,6 @@ body {
     border-radius: 10px;
 }
 
-.main-page-img-one, .main-page-img-two {
-    margin-top: 200px;
-    flex: auto;
-    height: 30px;
-    width: 31px;
-}
-
-.main-page-img-one{
-    padding-right: 10px;
-}
-
-.main-page-img-two{
-    padding-left: 10px;
-}
-.main-page__card-one{
-    flex: 1 1 33%;
-    padding-right: 10px;
-}
-.main-page__card-two{
-    flex: 1 1 33%;
-    padding-right: 10px;
-}
-.main-page__card-three{
-    flex: 1 1 33%;
-    padding-right: 10px;
-}
 .laptop{
     margin-top: 10px;
     font-family: 'Lato';
@@ -288,6 +261,7 @@ body {
     line-height: 41px;
     color: #000000;
     padding-left: 40px;
+    margin-bottom: 20px;
 }
 
 
@@ -344,3 +318,51 @@ ul{
     margin-top: -5px;
 }
 
+/* ------------------- Слайдер -----------------------------*/
+.swiper{
+    width: 800px;
+    height: 100%;
+    background-color: #C6D8FF;
+    border-radius: 2%;
+  }
+
+  .swiper-slide{
+    display: flex;
+    flex: 1 1 33%;
+    padding-right: 10px;
+  }
+
+  .swiper-wrapper{
+    display: flex;
+    background-color: #C6D8FF;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+    left: auto;
+    position: static !important;
+    padding-top: -10px !important;
+    padding-top: 200px !important;
+    padding-left: 15px;
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next{
+    right: auto;
+    position: static !important;
+    padding-top: 200px !important;
+    padding-right: 15px;
+  }
+
+  .swiper-slide-type{
+    flex: 1 1 33%;
+    padding-right: 10px;
+  }
+
+.swiper-slide-type img{
+    max-width: 235px;
+    max-height: 221px;
+}
+.laptop{
+    margin-top: 20px !important;
+}

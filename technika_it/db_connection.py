@@ -51,13 +51,15 @@ connection = create_connection(
     config('DB_NAME'), config('DB_USER'), config('DB_PASSWORD'), config('DB_HOST'), ''
 )
 
+delete_comment = "DROP TABLE client_app_image_product"
+execute_query(connection, delete_comment)
+delete_comment = "DROP TABLE client_app_category_product"
+execute_query(connection, delete_comment)
+delete_comment = "DROP TABLE client_app_product"
+execute_query(connection, delete_comment)
+delete_comment = "DROP TABLE client_app_image"
+execute_query(connection, delete_comment)
 
-# delete_comment = "DROP TABLE client_app_product"
-# execute_query(connection, delete_comment)
-# delete_comment = "DROP TABLE client_app_image_product"
-# execute_query(connection, delete_comment)
-# delete_comment = "DROP TABLE client_app_category_product"
-# execute_query(connection, delete_comment)
 
 
 create_image_table = """
@@ -160,11 +162,11 @@ categories = [
     (10, "Аксессуары")
 ]
 imgs = [
-    (1, "https://items.s1.citilink.ru/1891570_v01_b.jpg", "something aaa"),
+    (1,"https://c.dns-shop.ru/thumb/st4/fit/300/300/36f2c767ad98f5c902dbcb6cee38b51e/43d204d624f95a8f83b8bbf33624315c4b9013149bfb6da6de4b90ab9bf73742.jpg", "something aaa"),
     (2,"https://c.dns-shop.ru/thumb/st4/fit/0/0/d28d138ac48b4d07759deac35eaf63c8/e629cf6cd47923025b0085c660818330ca293519b198543890988f13cc93d9e3.jpg.webp","IT_Boss"),
-    (3,"https://c.dns-shop.ru/thumb/st1/fit/0/0/45c60cc384000b0128a297af91c18531/3f002f7052ead4264b6e940c222d6c25461464acab13208ebefd680b7fdb9706.jpg.webp","Lyaska"),
-    (4,"https://c.dns-shop.ru/thumb/st1/fit/500/500/c2a8385a9f865f0a26dd544e1fcb7e12/d732e228379e44282934ac8d76b2badfc350294e124583c87378a3ff5718f780.jpg.webp","Za"),
-    (5,"https://c.dns-shop.ru/thumb/st4/fit/500/500/d503fd0615b3e9ea6a93ee904f365ccd/b027761f69dccbdffb2bb8c545e29248c09c0674d1cac6ddc63fd5a16c23b600.jpg.webp","Mashku"),
+    (3,"https://c.dns-shop.ru/thumb/st4/fit/300/300/a6d30de5f8338b405e51abc59649aa20/25a9285315754663ae515ad6ccce60f5c44aabe31c0fd3b5c5b811b0bc2f1dd2.jpg","Lyaska"),
+    (4,"https://items.s1.citilink.ru/1848729_v01_b.jpg","Za"),
+    (5,"https://c.dns-shop.ru/thumb/st4/fit/300/300/b1af3c8ab65bab573d8ca389400c5bd1/a1896283b9f2156c31ad61dde88882ccfee2894476e184f4c72e911acf3bde87.jpg","Mashku"),
     (6,"https://c.dns-shop.ru/thumb/st4/fit/500/500/100368f9e8fbab7d83bde7d1a266428e/150d9a55fa04794593ac811d244387b6501b4e4bdd20e3725a9cfdecaa0af82a.jpg.webp","Mozno"),
 
 ]
@@ -195,7 +197,7 @@ insert_query = (
 
 connection.autocommit = True
 cursor = connection.cursor()
-cursor.execute(insert_query[0], categories)
+# cursor.execute(insert_query[0], categories)
 cursor.execute(insert_query[1], imgs)
-cursor.execute(insert_query[2], manufacturers)
+# cursor.execute(insert_query[2], manufacturers)
 cursor.execute(insert_query[3], products)

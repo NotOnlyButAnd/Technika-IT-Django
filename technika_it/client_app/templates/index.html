@@ -9,6 +9,10 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     <title>technika IT</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -52,48 +56,94 @@
                     <br><a class="nav__catalog" href="#power"><img src="{% static 'img/power.png' %}">Мониторы</a>
                     <br><a class="nav__catalog" href="#accessories"><img src="{% static 'img/accessories.png' %}">Аксессуары</a>
                 </div>
-                <div class="new_box">
-                <p class="new_text">Новинки</p>
-                <div class="main-page__block">
-                    <div class="main-page-img-one">
-                        <img src="{% static 'img/left-arrow.png' %}">
-                    </div>
-                    <div class="main-page__card">
-                        <div class="main-page__card-one">
-                            <a class="nav__tovar" href="#tovar">
-                                <img src="{% static 'img/laptop-one.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
-                                <p class="laptop">17.3" Ноутбук MSI GF76 Katana 11SC-483XRU черный</p>
-                            </a>
-                            <button type="button" class="price">60 949 ₽</button>
-                            <button type="button" class="favourites" ><img src="{% static 'img/white_heart.png' %}"></button>
-                            <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
-                        </div> 
+                
+               <div class="new_box">
+                    <p class="new_text">Новинки</p>
+                    <div class="main-page__block">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                {% for product in new_products %}
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-type">
+                                        <a class="nav__tovar" href="#tovar">
+                                            <img src="{{ product.main_image }}" alt="image">
+                                            <p class="laptop">Ноутбук {{ product.title }}</p>
+                                        </a>
+                                        <button type="button" class="price">{{ product.price }} ₽</button>
+                                        <button type="button" class="favourites" ><img src="{% static 'img/white_heart.png' %}"></button>
+                                        <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                                <<!-- div class="swiper-slide">
+                                    <div class="swiper-slide-type">
+                                        <a class="nav__tovar" href="#tovar">
+                                            <img src="{% static 'img/laptop-two.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
+                                            <p class="laptop">14.1" Ноутбук Irbis NB270 белый</p>
+                                        </a>
+                                        <button type="button" class="price">19 999 ₽</button>
+                                        <button type="button" class="favourites"><img src="{% static 'img/white_heart.png' %}"></button>
+                                        <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
+                                    </div>
+                                </div>
+                
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-type">
+                                        <a class="nav__tovar" href="#tovar">
+                                            <img src="{% static 'img/laptop-three.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
+                                            <p class="laptop">15.6" Ноутбук ASUS VivoBook PRO 15 M6500QH-HN034 синий</p>
+                                        </a>
+                                        <button type="button" class="price">22 489 ₽</button>
+                                        <button type="button" class="favourites" ><img src="{% static 'img/white_heart.png' %}"></button>
+                                        <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
+                                    </div> 
+                                </div>
+                                    
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-type">
+                                        <a class="nav__tovar" href="#tovar">
+                                            <img src="{% static 'img/laptop-one.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
+                                            <p class="laptop">17.3" Ноутбук MSI GF76 Katana 11SC-483XRU черный</p>
+                                        </a>
+                                        <button type="button" class="price">60 949 ₽</button>
+                                        <button type="button" class="favourites" ><img src="{% static 'img/white_heart.png' %}"></button>
+                                        <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
+                                    </div>
+                                </div>
+
+
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-type">
+                                        <a class="nav__tovar" href="#tovar">
+                                            <img src="{% static 'img/laptop-two.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
+                                            <p class="laptop">14.1" Ноутбук Irbis NB270 белый</p>
+                                        </a>
+                                        <button type="button" class="price">19 999 ₽</button>
+                                        <button type="button" class="favourites"><img src="{% static 'img/white_heart.png' %}"></button>
+                                        <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
+                                    </div>
+                                </div>
+                
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-type">
+                                        <a class="nav__tovar" href="#tovar">
+                                            <img src="{% static 'img/laptop-three.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
+                                            <p class="laptop">15.6" Ноутбук ASUS VivoBook PRO 15 M6500QH-HN034 синий</p>
+                                        </a>
+                                        <button type="button" class="price">22 489 ₽</button>
+                                        <button type="button" class="favourites" ><img src="{% static 'img/white_heart.png' %}"></button>
+                                        <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
+                                    </div>  -->
+                                <!-- </div> -->
+                            </div>
+                            <div class="swiper-pagination"></div>
                         
-                        <div class="main-page__card-two">
-                            <a class="nav__tovar" href="#tovar">
-                                <img src="{% static 'img/laptop-two.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
-                                <p class="laptop">14.1" Ноутбук Irbis NB270 белый</p>
-                            </a>
-                            <button type="button" class="price">19 999 ₽</button>
-                            <button type="button" class="favourites"><img src="{% static 'img/white_heart.png' %}"></button>
-                            <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
-                        </div> 
-    
-                        <div class="main-page__card-three">
-                            <a class="nav__tovar" href="#tovar">
-                                <img src="{% static 'img/laptop-three.png' %}" alt="Ноутбук MSI GF76 Katana 11SC-483XRU черный">
-                                <p class="laptop">15.6" Ноутбук ASUS VivoBook PRO 15 M6500QH-HN034 синий</p>
-                            </a>
-                            <button type="button" class="price">22 489 ₽</button>
-                            <button type="button" class="favourites" ><img src="{% static 'img/white_heart.png' %}"></button>
-                            <button type="button" class="basket" ><img src="{% static 'img/white_basket.png' %}"></button>
-                        </div> 
-                    </div>
-                    <div class="main-page-img-two">
-                        <img src="{% static 'img/right-arrow.png' %}">
+                        </div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
 
@@ -142,6 +192,29 @@
                 </div>
             </div>
         </div>
+    
+    <script>
+            var swiper = new Swiper('.swiper', {
+            slidesPerView: 3,
+            direction: getDirection(),
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                resize: function () {
+                swiper.changeDirection(getDirection());
+                },
+            },mousewheel: true,
+            keyboard: true,
+            });
+            function getDirection() {
+            var windowWidth = window.innerWidth;
+            var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+            return direction;
+            }
+            </script>
 
 
 
