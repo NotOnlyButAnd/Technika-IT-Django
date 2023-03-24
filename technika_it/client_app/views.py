@@ -9,7 +9,6 @@ category_url = 'http://127.0.0.1:8000/category'
 
 def index(request): 
     new_products = get_new_products_list()
-    print(new_products)
     return render(request, 'index.html', {'new_products': new_products})
 
 
