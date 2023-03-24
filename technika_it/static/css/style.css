@@ -341,16 +341,29 @@ ul{
     position: relative;
   }
 
-  .swiper-button-next, .swiper-rtl .swiper-button-prev{
-    right: 300px !important; 
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
     left: auto;
+    position: static !important;
+    padding-top: -10px !important;
+    padding-top: 200px !important;
+    padding-left: 15px;
   }
   .swiper-button-prev, .swiper-rtl .swiper-button-next{
-    left: 640px !important; 
     right: auto;
+    position: static !important;
+    padding-top: 200px !important;
+    padding-right: 15px;
   }
 
   .swiper-slide-type{
     flex: 1 1 33%;
     padding-right: 10px;
   }
+
+.swiper-slide-type img{
+    max-width: 235px;
+    max-height: 221px;
+}
+.laptop{
+    margin-top: 20px !important;
+}
